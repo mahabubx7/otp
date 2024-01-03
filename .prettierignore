@@ -1,0 +1,7 @@
+node_modules
+lib
+.gitignore
+.git
+.gitattributes
+.gitmodules
+*-lock.json
