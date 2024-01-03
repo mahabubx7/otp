@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1704287498628" clover="3.2.0">
+  <project timestamp="1704287498628" name="All files">
+    <metrics statements="19" coveredstatements="19" conditionals="11" coveredconditionals="11" methods="1" coveredmethods="1" elements="31" coveredelements="31" complexity="0" loc="19" ncloc="19" packages="1" files="1" classes="1"/>
+    <file name="otp.ts" path="/Users/mahabub/rnd/mx7/src/otp.ts">
+      <metrics statements="19" coveredstatements="19" conditionals="11" coveredconditionals="11" methods="1" coveredmethods="1"/>
+      <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="9" count="8" type="cond" truecount="1" falsecount="0"/>
+      <line num="10" count="4" type="stmt"/>
+      <line num="13" count="8" type="cond" truecount="1" falsecount="0"/>
+      <line num="14" count="5" type="stmt"/>
+      <line num="17" count="8" type="cond" truecount="1" falsecount="0"/>
+      <line num="18" count="7" type="stmt"/>
+      <line num="21" count="8" type="cond" truecount="3" falsecount="0"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="26" count="6" type="stmt"/>
+      <line num="28" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="30" count="3" type="stmt"/>
+      <line num="32" count="3" type="stmt"/>
+      <line num="33" count="18" type="stmt"/>
+      <line num="34" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="40" count="3" type="stmt"/>
+      <line num="41" count="18" type="stmt"/>
+      <line num="42" count="18" type="stmt"/>
+      <line num="46" count="6" type="stmt"/>
+    </file>
+  </project>
+</coverage>

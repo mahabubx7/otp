@@ -8,6 +8,11 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
-  "ignorePatterns": ["**/lib/*", "**/__test__/**", "**/*.spec.ts"],
+  "ignorePatterns": [
+    "**/lib/*",
+    "**/__test__/**",
+    "**/*.spec.ts",
+    "./coverage/*"
+  ],
   "parser": "@typescript-eslint/parser"
 }
