@@ -45,6 +45,10 @@
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/mahabubx7/otp"
+  },
   "lint-staged": {
     "src/**/*.ts": [
       "eslint --fix",
