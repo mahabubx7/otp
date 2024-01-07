@@ -7,19 +7,13 @@
 **Install this package**
 
 ```bash
-npm i @mx7/otp
-```
-
-or
-
-```bash
-yarn add @mx7/otp
-```
-
-or
-
-```bash
-pnpm add @mx7/otp
+npm i @mx7/otp # using NPM
+# or
+yarn add @mx7/top # using yarn
+# or
+pnpm add @mx7/otp # using pnpm
+# or
+bun add otp  # using bun
 ```
 
 ## How to use
@@ -41,7 +35,7 @@ const { generateOtp } = require('@mx7/otp')
 ```yaml
 Node: v14.x or later
 Environments: ['^ Node14', 'DOM', 'ES5 or later']
-Types: ['module', 'commonjs']
+Types: ['ESM', 'CJS']
 ```
 
 ## Available APIs
@@ -76,17 +70,17 @@ const otp2 = generateOtp({
 console.log(otp2) // returns: '0123'
 
 // mix alpha => mixed [a-z]
-const otp2 = generateOtp({
+const otp3 = generateOtp({
   alpha: true,
 })
-console.log(otp2) // returns: '0x27j4'
+console.log(otp3) // returns: '0x27j4'
 
 // mix alpha & uppercase => mixed [A-Z]
-const otp3 = generateOtp({
+const otp4 = generateOtp({
   alpha: true,
   capitalize: true,
 })
-console.log(otp3) // returns: '0X27J4'
+console.log(otp4) // returns: '0X27J4'
 ```
 
 ## Author

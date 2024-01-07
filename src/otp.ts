@@ -31,9 +31,7 @@ export function generateOtp(args: GenerateOtpArgs = {}): string {
 
     for (let i = 0; i < args.digits; i++) {
       const random = Math.floor(Math.random() * 36)
-      otp += args.capitalize
-        ? alphaNumeric[random].toUpperCase()
-        : alphaNumeric[random]
+      otp += alphaNumeric[random]
     }
   } else {
     /* Numeric only : Default */
@@ -43,5 +41,5 @@ export function generateOtp(args: GenerateOtpArgs = {}): string {
     }
   }
 
-  return otp
+  return args.capitalize ? otp.toUpperCase() : otp
 }

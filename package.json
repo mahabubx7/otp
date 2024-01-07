@@ -1,8 +1,7 @@
 {
   "name": "@mx7/otp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple OTP generator!",
-  "type": "module",
   "types": "./lib/index.d.ts",
   "main": "./lib/index.cjs",
   "module": "./lib/index.js",
@@ -24,7 +23,8 @@
   },
   "keywords": [
     "mx7",
-    "otp"
+    "otp",
+    "otp-generator"
   ],
   "author": "Mahabub <mahabubx7@gmail.com>",
   "license": "MIT",
