@@ -1,11 +1,20 @@
 /**
  * @type {Object} GenerateOtpArgs
  * @property {number} digits - Number of digits to generate
- * @property {boolean} alpha - Mix alpha-numeric
- * @property {boolean} capitalize - Capitalize alpha-numeric
+ * @property {boolean} alpha - Mix alpha-numeric [optional]
+ * @property {boolean} capitalize - Capitalize result [dependsOn => alpha & optional]
  */
-export type GenerateOtpArgs = {
+
+interface GenerateOtpArgsBase {
   digits?: number
-  alpha?: boolean
+  alpha?: false
+  capitalize?: never
+}
+
+interface GenerateOtpArgsAlpha {
+  digits?: number
+  alpha: true
   capitalize?: boolean
 }
+
+export type GenerateOtpArgs = GenerateOtpArgsBase | GenerateOtpArgsAlpha

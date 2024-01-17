@@ -6,24 +6,13 @@ import { GenerateOtpArgs } from './types'
  * @returns string
  */
 export function generateOtp(args: GenerateOtpArgs = {}): string {
-  if (!args.digits) {
-    args.digits = 6 // default value i.e. '071234'
-  }
-
-  if (!args.alpha) {
-    args.alpha = false // mix alpha-numeric
-  }
-
-  if (!args.capitalize) {
-    args.capitalize = false // capitalize alpha-numeric
-  }
-
+  if (!args.digits) args.digits = 6 // default digits is 6
   if (args.digits < 4 || args.digits > 32) {
     // throw error if digits is less than 4 or greater than 32
     throw new Error('Digits must be between 4 and 32')
   }
 
-  let otp = '' // initialize otp as string
+  let otp: string = '' // initialize otp as string
 
   if (args.alpha) {
     /* Alpha Numeric */
@@ -41,5 +30,6 @@ export function generateOtp(args: GenerateOtpArgs = {}): string {
     }
   }
 
+  // capitalize the otp if needed before the return
   return args.capitalize ? otp.toUpperCase() : otp
 }
