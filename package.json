@@ -1,6 +1,6 @@
 {
   "name": "@mx7/otp",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A simple OTP generator!",
   "types": "./lib/index.d.ts",
   "main": "./lib/index.cjs",
@@ -45,13 +45,6 @@
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "github",
-    "url": "https://github.com/mahabubx7/otp"
-  },
   "lint-staged": {
     "src/**/*.ts": [
       "eslint --fix",
@@ -61,5 +54,15 @@
       "prettier --write .",
       "git add ."
     ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/mahabubx7/otp"
+  },
+  "bugs": {
+    "url": "https://github.com/mahabubx7/otp/issues"
   }
 }
