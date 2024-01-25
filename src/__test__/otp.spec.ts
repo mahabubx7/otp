@@ -1,8 +1,15 @@
-import { generateOtp } from '../otp'
+import { generateOtp, generateOtpAsync } from '../otp'
 
 describe('OTP tests ...', () => {
   test('should return an OTP', () => {
     const otp = generateOtp()
+    expect(typeof otp).toBe('string')
+    expect(otp.length).toBe(6)
+    expect(otp).toMatch(/^[0-9]{6}$/)
+  })
+
+  test('should return an OTP asynchronously', async () => {
+    const otp = await generateOtpAsync()
     expect(typeof otp).toBe('string')
     expect(otp.length).toBe(6)
     expect(otp).toMatch(/^[0-9]{6}$/)
