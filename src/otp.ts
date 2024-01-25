@@ -3,7 +3,7 @@ import { GenerateOtpArgs } from './types'
 /**
  * Generate OTP function
  * @param args GenerateOtpArgs
- * @returns string
+ * @returns {string}
  */
 export function generateOtp(args: GenerateOtpArgs = {}): string {
   if (!args.digits) args.digits = 6 // default digits is 6
@@ -32,4 +32,19 @@ export function generateOtp(args: GenerateOtpArgs = {}): string {
 
   // capitalize the otp if needed before the return
   return args.capitalize ? otp.toUpperCase() : otp
+}
+
+/**
+ * Generate OTP function with asynchronously
+ * @param args GenerateOtpArgs
+ * @returns {Promise<string>}
+ */
+export function generateOtpAsync(args: GenerateOtpArgs = {}): Promise<string> {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(generateOtp(args))
+    } catch (error) {
+      reject(error)
+    }
+  })
 }

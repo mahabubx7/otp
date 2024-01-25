@@ -1,6 +1,8 @@
-# OTP generator for JavaScript or TypeScript
+# OTP generator for NodeJS runtime apps (JavaScript or TypeScript)
 
 > Welcome! This node package is built for generating OTP per necessary requirements. It can generate both numeric or alpha-numeric. Hope you will enjoy it!
+
+**It can be used with NodeJS runtime and Deno/Bun too! (I guess)**
 
 ## Getting started
 
@@ -22,19 +24,23 @@ bun add otp  # using bun
 
 ```js
 import { generateOtp } from '@mx7/otp'
+// or async way
+import { generateOtpAsync } from '@mx7/otp'
 ```
 
 **CommonJS**
 
 ```js
 const { generateOtp } = require('@mx7/otp')
+// or async way
+const { generateOtpAsync } = require('@mx7/otp')
 ```
 
 ## Requirements
 
 ```yaml
 Node: v14.x or later
-Environments: ['^ Node14', 'DOM', 'ES5 or later']
+Environments: ['^ Node14', 'ES5 or later']
 Types: ['ESM', 'CJS']
 ```
 
@@ -50,7 +56,7 @@ function generateOtp(args?: GenerateOtpArgs): string
 type GenerateOtpArgs = {
   digits?: number // optional
   alpha?: boolean // optional
-  capitalize?: boolean // optional
+  capitalize?: boolean // optional, but only if alpha is set TRUE!
 }
 ```
 
@@ -62,6 +68,10 @@ import { generateOtp } from '@mx7/otp'
 // default => length 6
 const otp1 = generateOtp()
 console.log(otp1) // returns: '012345'
+
+// default with Async. way => length 6
+const otpAsync = await generateOtpAsync() // Promise<string>
+console.log(otpAsync) // returns: '012345'
 
 // custom length => i.e. 4
 const otp2 = generateOtp({
@@ -85,5 +95,20 @@ console.log(otp4) // returns: '0X27J4'
 
 ## Author
 
-@mahabubx7
-[Github](https://github.com/mahabubx7)
+[@mahabubx7](https://github.com/mahabubx7)
+
+## Changelogs
+
+### [1.2.0] - 2024-25-01
+
+#### Feature
+
+- Added `Asynchronous` function for generating OTP
+- Added Module path aliases
+- Added changelogs
+- Updated documentation in README file
+
+#### Fixed
+
+- Fixed some typos
+- Fixed npm files selection
