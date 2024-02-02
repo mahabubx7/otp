@@ -39,8 +39,10 @@ export function generateOtp(args: GenerateOtpArgs = {}): string {
  * @param args GenerateOtpArgs
  * @returns {Promise<string>}
  */
-export function generateOtpAsync(args: GenerateOtpArgs = {}): Promise<string> {
-  return new Promise((resolve, reject) => {
+export async function generateOtpAsync(
+  args: GenerateOtpArgs = {},
+): Promise<string> {
+  return await new Promise((resolve, reject) => {
     try {
       resolve(generateOtp(args))
     } catch (error) {

@@ -1,10 +1,10 @@
 {
   "name": "@mx7/otp",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A simple OTP generator!",
   "types": "./lib/index.d.ts",
-  "main": "./lib/index.cjs",
-  "module": "./lib/index.js",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
   "files": [
     "lib/index.d.ts",
     "lib/index.js",
@@ -13,7 +13,8 @@
   "exports": {
     ".": {
       "import": "./lib/index.mjs",
-      "require": "./lib/index.js"
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
     },
     "./package.json": "./package.json"
   },

@@ -99,7 +99,14 @@ console.log(otp4) // returns: '0X27J4'
 
 ## Changelogs
 
-### [1.2.0] - 2024-25-01
+### [1.2.1] 2024-02-02
+
+#### Fixes
+
+- Fixed async OTP generator function
+- Added one more test with async fn
+
+### [1.2.0] - 2024-01-25
 
 #### Feature
 
