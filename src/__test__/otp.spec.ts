@@ -15,6 +15,13 @@ describe('OTP tests ...', () => {
     expect(otp).toMatch(/^[0-9]{6}$/)
   })
 
+  test('should return a long OTP asynchronously', async () => {
+    const otp = await generateOtpAsync({ digits: 32 })
+    expect(typeof otp).toBe('string')
+    expect(otp.length).toBe(32)
+    expect(otp).toMatch(/^[0-9]{32}$/)
+  })
+
   test('should return an OTP with 4 digits', () => {
     const otp = generateOtp({ digits: 4 })
     expect(typeof otp).toBe('string')
