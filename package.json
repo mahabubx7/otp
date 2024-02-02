@@ -1,6 +1,6 @@
 {
   "name": "@mx7/otp",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A simple OTP generator!",
   "types": "./lib/index.d.ts",
   "main": "./lib/index.js",
